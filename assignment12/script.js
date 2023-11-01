@@ -11,8 +11,6 @@ function onSubmit(e){
     let name = nameInput.value
     let email = emailInput.value
 
-    // let key = `userDetail_${Date.now()}`
-
     let newUser = {
          name,
          email
