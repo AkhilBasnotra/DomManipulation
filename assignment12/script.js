@@ -7,17 +7,20 @@ myForm.addEventListener('submit', onSubmit)
 
 function onSubmit(e){
     e.preventDefault()
+    
+    let name = nameInput.value
+    let email = emailInput.value
 
-    let key = `userDetail_${Date.now()}`
+    // let key = `userDetail_${Date.now()}`
 
     let newUser = {
-         name : nameInput.value,
-         email : emailInput.value,
+         name,
+         email
     }
 
     let newUser_serializer = JSON.stringify(newUser)
     
-    localStorage.setItem(key, newUser_serializer)
+    localStorage.setItem(newUser.email, newUser_serializer)
     
 
     let li = document.createElement('li')
